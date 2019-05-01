@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<body style=background-image:url("/media/bb.jpg") width=100%>
+<div>
+<pre><h1><font color="red">            "Be a headtuner this Valentine's Day"</font><h1></pre>
+<table width=100% border=0>
+</body>
+{% for l in lst %}
+
+<tr>
+<td width=50%><h3>{{l.name}}</h3><br>
+<img src='{{l.photo.url}}' ></td>
+
+<td width=50%><h3><font style="font-family:Times New Roman Italic;">Product details:</font></h3><br><font size="5">
+Description:{{l.desc}}<br>
+price:{{l.price}}<br>
+Quantity:{{l.stock}}<br>
+Available:{% if l.avialable %}Yes{% else %}No{% endif %}<br>
+created:{{l.created}}<br>
+updated:{{l.updated}}</font></td>
+
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

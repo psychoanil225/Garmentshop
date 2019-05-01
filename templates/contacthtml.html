@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="container">
+<h1></h1>
+
+<form name="form" action="" method="post">
+{% csrf_token %}        <! for secure data or site>
+{{ form.as_p }}         <! as_p means show in paragraphs>
+<button type="submit">Submit</button><br><br>
+</form>
+</div>
+
+
+
+{% endblock %}
